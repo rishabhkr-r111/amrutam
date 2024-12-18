@@ -1,0 +1,9 @@
+.search {
+  width: full;
+  height: 221px;
+  background-image: url("./assets/frame.png");
+}
+
+.search h1 {
+  font-family: 'Gotham Rounded', sans-serif;
+}
