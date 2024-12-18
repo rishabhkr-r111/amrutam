@@ -7,3 +7,18 @@
 .search h1 {
   font-family: 'Gotham Rounded', sans-serif;
 }
+
+/* .search select {
+  border-right: 12px solid transparent;
+} */
+
+.filters {
+  width: full;
+  height: 72px;
+  font-family: 'DINPro', sans-serif;
+  color: #585858;
+}
+
+.filters select {
+  border-right: 13px solid transparent
+}
