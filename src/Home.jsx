@@ -1,4 +1,4 @@
-import Navbar from "./components/Navbar";
+import DoctorCard from "./components/DoctorCard";
 import './Home.css';
 import { ArrowRight } from "lucide-react";
 import { MapPin } from "lucide-react";
@@ -8,7 +8,6 @@ import { X } from "lucide-react";
 function Home() {
   return (
     <div>
-      <Navbar />
 
       <section className="container search flex flex-col justify-center text-center align-centre space-y-4 ">
         <h1 className="text-3xl">
@@ -48,18 +47,18 @@ function Home() {
               <option value="option2">Option 2</option>
             </select>
             <select className="px-[13px] py-[6px] bg-[#F3F3F3] rounded-lg flex items-center">
-              <option value="expertise">Expertise</option>
+              <option value="expertise">Gender</option>
               <option value="option1">Option 1</option>
               <option value="option2">Option 2</option>
             </select>
             <select className="px-[13px] py-[6px] bg-[#F3F3F3] rounded-lg flex items-center">
-              <option value="expertise">Expertise</option>
+              <option value="expertise">Fees</option>
               <option value="option1">Option 1</option>
               <option value="option2">Option 2</option>
             </select>
 
             <button className="px-[13px] py-[6px] bg-[#F3F3F3] rounded-lg flex items-center">
-              Gender
+              Language
               <span className="ml-[40px]">
                 {" "}
                 <img src={ArrowDown}></img>
@@ -79,18 +78,24 @@ function Home() {
       <section className="container selected-filters">
         <div className=" flex justify-end align-centure gap-7 mr-48 mt-[50px]">
           <button className="px-[15px] py-[8px] bg-[#EAF2EA] text-black rounded-3xl flex items-center">
-            All filters
+            Hair Care
             <span className="ml-[40px]">
               <X />
             </span>
           </button>
           <button className="px-[13px] py-[6px] bg-[#EAF2EA] text-black rounded-3xl  flex items-center">
-            All filters
+            Female
             <span className="ml-[40px]">
               <X />
             </span>
           </button>
         </div>
+      </section>
+
+      <section className="container doctors mt-9 flex justify-center gap-4">
+        <DoctorCard />
+        <DoctorCard />
+        <DoctorCard />
       </section>
     </div>
   );
