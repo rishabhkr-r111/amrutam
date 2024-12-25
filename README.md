@@ -7,6 +7,11 @@ npm install
 npm run dev
 ```
 
+## Demo video
+```
+https://youtu.be/FuXKhEkA4jE
+```
+
 ## Screenshots
 
 <img width="959" alt="image" src="https://github.com/user-attachments/assets/2f26bf78-4d41-4483-88bc-bb3d36ebe2cf" />
