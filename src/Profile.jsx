@@ -1,4 +1,3 @@
-import "./Profile.css";
 import { Star } from "lucide-react";
 import { Check } from "lucide-react";
 import frame from "./assets/frame2.png";
