@@ -5,20 +5,48 @@
 }
 
 .search h1 {
-  font-family: 'Gotham Rounded', sans-serif;
+  font-family: "Gotham Rounded", sans-serif;
 }
-
-/* .search select {
-  border-right: 12px solid transparent;
-} */
 
 .filters {
   width: full;
   height: 72px;
-  font-family: 'DINPro', sans-serif;
+  font-family: "DINPro", sans-serif;
   color: #585858;
 }
 
 .filters select {
-  border-right: 13px solid transparent
+  border-right: 13px solid transparent;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-out forwards;
+  opacity: 0;
+}
+
+.animation-delay-200 {
+  animation-delay: 200ms;
+}
+
+.animation-delay-400 {
+  animation-delay: 400ms;
+}
+
+.animation-delay-600 {
+  animation-delay: 600ms;
+}
+
+.animation-delay-800 {
+  animation-delay: 800ms;
 }
