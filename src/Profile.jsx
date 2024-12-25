@@ -3,17 +3,18 @@ import { Star } from "lucide-react";
 import { Check } from "lucide-react";
 import frame from "./assets/frame2.png";
 import doctor from "./assets/docter2.png";
-import { Calendar, Clock, MapPin } from "lucide-react";
+import building from "./assets/building.png";
+import reviewImg from "./assets/review-img.png";
+import care1 from "./assets/care1.png";
+import care2 from "./assets/care2.png";
+import care3 from "./assets/care3.png";
+import care4 from "./assets/care4.png";
+import { Calendar } from "lucide-react";
 import { Facebook,  Youtube, Instagram, Twitter } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 
 function Profile() {
-  const specialties = [
-    { name: "Women's Health", icon: "👩" },
-    { name: "Skin Care", icon: "🧴" },
-    { name: "Immunity", icon: "🛡️" },
-    { name: "Hair Care", icon: "💇‍♀️" },
-  ];
 
   const concerns = [
     "Skin Treatment",
@@ -184,17 +185,30 @@ function Profile() {
                 </h2>
               </div>
               <div className="grid grid-cols-4 gap-4 p-7 ">
-                {specialties.map((specialty) => (
-                  <div
-                    key={specialty.name}
-                    className="flex flex-col items-center text-center"
-                  >
-                    <div className="w-12 h-12 bg-green-50 rounded-full flex items-center justify-center text-xl">
-                      {specialty.icon}
-                    </div>
-                    <span className="text-xs mt-2">{specialty.name}</span>
+                <div className="flex flex-col items-center text-center">
+                  <div className="w-[100px] h-[96px] bg-green-50 rounded-full flex items-center justify-center text-xl">
+                    <img src={care1} />
                   </div>
-                ))}
+                  <span className="text-xs mt-2">women’s health</span>
+                </div>
+                <div className="flex flex-col items-center text-center">
+                  <div className="w-[100px] h-[96px] bg-green-50 rounded-full flex items-center justify-center text-xl">
+                    <img src={care2} />
+                  </div>
+                  <span className="text-xs mt-2">Skin Care</span>
+                </div>
+                <div className="flex flex-col items-center text-center">
+                  <div className="w-[100px] h-[96px] bg-green-50 rounded-full flex items-center justify-center text-xl">
+                    <img src={care3} />
+                  </div>
+                  <span className="text-xs mt-2">Immunity</span>
+                </div>
+                <div className="flex flex-col items-center text-center">
+                  <div className="w-[100px] h-[96px] bg-green-50 rounded-full flex items-center justify-center text-xl">
+                    <img src={care4} />
+                  </div>
+                  <span className="text-xs mt-2">Hair Care</span>
+                </div>
               </div>
             </div>
 
@@ -222,20 +236,51 @@ function Profile() {
                   My Work Experience
                 </h2>
               </div>
-              <div className="space-y-4 p-7">
-                <div className="flex gap-4">
-                  <MapPin className="text-blue-600" />
-                  <div>
-                    <div className="font-medium">Mothern Medical Clinic</div>
-                    <div className="text-sm text-gray-600">2016-PRESENT</div>
-                    <div className="text-sm text-gray-600">Senior Doctor</div>
+              <div className="p-6 bg-[#FAFBF8]">
+                <div>
+                  <div className="text-[#3A643B] font-semibold mb-4 font-['Poppins'] ">
+                    I HAVE BEEN IN PRACTICE FOR : 7+ YEARS
                   </div>
+                  <div className="h-px bg-[#D1D5D1] mb-6 w-3/4"></div>
                 </div>
-                <div className="flex gap-4">
-                  <MapPin className="text-blue-600" />
-                  <div>
-                    <div className="font-medium">Mothern Medical Clinic</div>
-                    <div className="text-sm text-gray-600">2010-2016</div>
+
+                <div className="space-y-6">
+                  <div className="flex justify-between items-start">
+                    <div className="flex gap-3">
+                      <img
+                        src={building}
+                        className="h-[48px] w-[48px] flex-shrink-0"
+                      />
+                      <div>
+                        <div className="font-semibold text-[#333548] font-['Poppins'] text-sm">
+                          Midtown Medical Clinic
+                        </div>
+                        <div className="text-[#333548] opacity-50 font-semibold font-sm">
+                          Senior doctor
+                        </div>
+                      </div>
+                    </div>
+                    <div className="text-[#333548] opacity-70">
+                      2016-PRESENT
+                    </div>
+                  </div>
+
+                  <div className="flex justify-between items-start">
+                    <div className="flex gap-3">
+                      <img
+                        src={building}
+                        className="h-[48px] w-[48px] flex-shrink-0"
+                      />
+                      <div>
+                        <div className="font-semibold text-[#333548] font-['Poppins'] text-sm">
+                          Midtown Medical Clinic
+                        </div>
+                        <div className="text-[#333548] opacity-50 font-semibold font-sm">
+                          Senior doctor
+                        </div>
+                      </div>
+                    </div>
+                    <div className="text-[#333548] opacity-70">2010-2015</div>
                   </div>
                 </div>
               </div>
@@ -247,48 +292,138 @@ function Profile() {
                   Featured Reviews (102)
                 </h2>
               </div>
-              <div className="flex flex-wrap gap-3 p-7">
-                {concerns.map((concern) => (
-                  <span
-                    key={concern}
-                    className="px-4 py-1 bg-[#F7F7FC] rounded-full text-[#3A643B] text-sm font-semibold"
-                  >
-                    {concern}
-                  </span>
-                ))}
+
+              <div className="p-4 space-y-4">
+                <div className="bg-white p-4 rounded-lg">
+                  <div className="flex items-start gap-4">
+                    <img
+                      src={reviewImg}
+                      className="w-12 h-12 rounded-full bg-gray-200 overflow-hidden"
+                    />
+                    <div className="flex-1">
+                      <div className="flex justify-between items-start">
+                        <div>
+                          <h3 className="font-semibold text-lg">
+                            Alicent Hightower
+                          </h3>
+                          <p className="text-gray-500 text-sm">
+                            Consulted for Skin care
+                          </p>
+                        </div>
+                        <span className="text-gray-500 text-sm">
+                          20 January 2023
+                        </span>
+                      </div>
+                      <div className="mt-2 mb-3">
+                        {" "}
+                        <div className="flex">
+                          {[1, 2, 3, 4, 5].map((star) => (
+                            <Star
+                              key={star}
+                              size={14}
+                              className={
+                                star <= 4
+                                  ? "fill-yellow-400 text-yellow-400"
+                                  : "text-gray-300"
+                              }
+                            />
+                          ))}
+                        </div>
+                      </div>
+                      <p className="text-gray-700">
+                        Might be bit early to confirm but yes I can see
+                        noticeable difference in my hairfall. will write again
+                        after using it for longer periods
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-white p-4 rounded-lg">
+                  <div className="flex items-start gap-4">
+                    <img
+                      src={reviewImg}
+                      className="w-12 h-12 rounded-full bg-gray-200 overflow-hidden"
+                    />
+                    <div className="flex-1">
+                      <div className="flex justify-between items-start">
+                        <div>
+                          <h3 className="font-semibold text-lg">
+                            Alicent Hightower
+                          </h3>
+                          <p className="text-gray-500 text-sm">
+                            Consulted for Pregnancy
+                          </p>
+                        </div>
+                        <span className="text-gray-500 text-sm">
+                          20 January 2023
+                        </span>
+                      </div>
+                      <div className="mt-2 mb-3">
+                        <div className="flex">
+                          {[1, 2, 3, 4, 5].map((star) => (
+                            <Star
+                              key={star}
+                              size={14}
+                              className={
+                                star <= 4
+                                  ? "fill-yellow-400 text-yellow-400"
+                                  : "text-gray-300"
+                              }
+                            />
+                          ))}
+                        </div>
+                      </div>
+                      <p className="text-gray-700">
+                        Might be bit early to confirm but yes I can see
+                        noticeable difference. will write again after using it
+                        for longer periods
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
 
           {/* Right Column */}
-          <div className="w-1/2 bg-gray-50 p-6 rounded-lg space-y-6">
-            <div className="flex justify-between items-center">
-              <h3 className="font-medium">Appointment Fee</h3>
-              <span className="text-xl font-semibold text-green-600">
+          <div className="w-1/2 border border-[#DCDCDC] rounded-2xl p-7 block h-min">
+            <div className="flex justify-between items-center  border border-[#DCDCDC] rounded-2xl px-7 py-4">
+              <h3 className="font-semibold font-['Nunito']">Appointment Fee</h3>
+              <span className="text-xl font-semibold text-[#3A643B]">
                 ₹699.00
               </span>
             </div>
 
             <div className="space-y-4">
-              <h4 className="font-medium">Select your mode of session</h4>
-              <div className="flex gap-4">
+              <div className="flex items-center gap-4 w-full mt-5">
+                <span className="text-black font-2xl font-semibold whitespace-nowrap ">
+                  Select your mode of session
+                </span>
+                <div className="h-px bg-gray-300 flex-grow"></div>
+              </div>
+              <div className="flex gap-5 justify-around font-semibold font-['Gotham Rounded']">
                 <button className="px-4 py-2 border rounded-lg flex items-center gap-2">
-                  <Clock className="w-4 h-4" />
-                  <div>
+                  <div className="px-7 py-1">
                     <div>In-Clinic</div>
                     <div className="text-xs text-gray-500">45 Mins</div>
                   </div>
                 </button>
-                <button className="px-4 py-2 border rounded-lg bg-green-50 border-green-500 flex items-center gap-2">
-                  <video className="w-4 h-4" />
-                  <div>
-                    <div>Video</div>
+                <button className="px-4 py-2 border rounded-lg bg-green-50 border-[#3A643B] flex items-center gap-2">
+                  <div className="px-7 py-1">
+                    <div className="flex gap-1 justify-center text-center">
+                      Video
+                      <span>
+                        <div className="bg-green-500 text-white rounded-full p-1 w-4 h-4 flex items-center justify-center translate-y-1">
+                          <Check size={10} />
+                        </div>
+                      </span>
+                    </div>
                     <div className="text-xs text-gray-500">45 Mins</div>
                   </div>
                 </button>
                 <button className="px-4 py-2 border rounded-lg flex items-center gap-2">
-                  <Calendar className="w-4 h-4" />
-                  <div>
+                  <div className="px-7 py-1">
                     <div>Chat</div>
                     <div className="text-xs text-gray-500">10 Mins</div>
                   </div>
@@ -297,20 +432,38 @@ function Profile() {
             </div>
 
             <div className="space-y-4">
-              <h4 className="font-medium">Pick a time slot</h4>
-              <div className="flex gap-4">
-                <button className="px-4 py-2 bg-green-50 border-green-500 border rounded-lg text-sm">
+              <div className="flex items-center gap-4 w-full mt-5">
+                <span className="text-black font-2xl font-semibold whitespace-nowrap ">
+                  Pick a Time slot
+                </span>
+                <div className="h-px bg-gray-300 flex-grow"></div>
+                <div className="border rounded-full p-2">
+                  <Calendar size={24} />
+                </div>
+              </div>
+              <div className="flex gap-4  justify-center items-center border border-[#DCDCDC] rounded-2xl px-7 py-4 ">
+                <div className="border rounded-full p-2">
+                  <ChevronLeft size={24} />
+                </div>
+                <button className="text-[#3A643B] px-4 py-2 bg-green-50 border-green-500 border rounded-lg text-sm  font-semibold">
                   Mon, 10 Oct
                   <div className="text-xs text-gray-500">10 slots</div>
                 </button>
                 <button className="px-4 py-2 border rounded-lg text-sm">
                   Tue, 11 Oct
-                  <div className="text-xs text-gray-500">12 slots</div>
+                  <div className="text-xs text-red-500 font-semibold">
+                    02 slots
+                  </div>
                 </button>
                 <button className="px-4 py-2 border rounded-lg text-sm">
                   Wed, 12 Oct
-                  <div className="text-xs text-gray-500">8 slots</div>
+                  <div className="text-xs text-orange-500 font-semibold">
+                    05 slots
+                  </div>
                 </button>
+                <div className="border rounded-full p-2">
+                  <ChevronRight size={24} />
+                </div>
               </div>
 
               <div className="space-y-4">
@@ -319,8 +472,8 @@ function Profile() {
                   {timeSlots.slice(0, 6).map((time) => (
                     <button
                       key={time}
-                      className={`p-2 text-sm border rounded ${
-                        time === "11:00 AM" ? "bg-green-600 text-white" : ""
+                      className={`py-[18px] text-sm border rounded-2xl ${
+                        time === "11:00 AM" ? "bg-[#3A643B] text-white" : ""
                       }`}
                     >
                       {time}
@@ -331,7 +484,10 @@ function Profile() {
                 <h5 className="font-medium">Evening</h5>
                 <div className="grid grid-cols-4 gap-2">
                   {timeSlots.slice(6).map((time) => (
-                    <button key={time} className="p-2 text-sm border rounded">
+                    <button
+                      key={time}
+                      className="py-[18px] text-sm border rounded-2xl"
+                    >
                       {time}
                     </button>
                   ))}
@@ -339,7 +495,7 @@ function Profile() {
               </div>
             </div>
 
-            <button className="w-full bg-green-600 text-white py-3 rounded-lg font-medium">
+            <button className="w-full bg-[#3A643B] text-white py-3 rounded-lg font-medium mt-5">
               Make An Appointment
             </button>
           </div>
